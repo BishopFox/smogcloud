@@ -1,7 +1,7 @@
 package main
 
 import (
-    "github.com/BishopFox/smogcloud-research/service"
+    "github.com/BishopFox/smogcloud/service"
     "github.com/aws/aws-sdk-go/aws/session"
     "github.com/remeh/sizedwaitgroup"
 )

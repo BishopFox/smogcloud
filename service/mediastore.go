@@ -2,7 +2,7 @@ package service
 
 import (
     "fmt"
-    "github.com/BishopFox/smogcloud-research/util"
+    "github.com/BishopFox/smogcloud/util"
     "github.com/aws/aws-sdk-go/aws"
     "github.com/aws/aws-sdk-go/aws/session"
     "github.com/aws/aws-sdk-go/service/mediastore"
