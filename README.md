@@ -9,7 +9,7 @@ Find exposed AWS cloud assets that you did not know you had. A comprehensive ass
  - Shadow IT
 
 ## 🛠 Getting Started
-1. Install and setup go
+1. Install and [setup golang](https://www.callicoder.com/golang-installation-setup-gopath-workspace/)
 2. Install smogcloud using the following command
 
     ``` 
