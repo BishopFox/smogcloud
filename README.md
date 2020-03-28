@@ -2,30 +2,12 @@
 
 Find exposed AWS cloud assets that you did not know you had. A comprehensive asset inventory is step one to any capable security program. We made smogcloud to enable security engineers, penetration testers, and AWS administrators to monitor the collective changes that create dynamic and ephemeral internet-facing assets on a more frequent basis. May be useful to identify:
 
-    * Internet-facing FQDNs and IPs across one or hundreds of AWS accounts
-    * Misconfigurations or vulnerabilities
-    * Assets that are no longer in use
-    * Services not currently monitored 
-    * Shadow IT
+ - Internet-facing FQDNs and IPs across one or hundreds of AWS accounts
+ - Misconfigurations or vulnerabilities
+ - Assets that are no longer in use
+ - Services not currently monitored 
+ - Shadow IT
 
-## Current Services
-Supported services:
-
-    * API Gateway
-    * CloudFront
-    * EC2
-    * Elastic Kubernetes Service
-    * Elastic Beanstalk
-    * Elastic Search
-    * Elastic Load Balancing 
-    * IoT
-    * Lightsail
-    * MediaStore
-    * Relational Database Service
-    * Redshift
-    * Route53
-    * S3
-    
 ## Getting Started
 1. Install and setup go
 2. Install smogcloud using the following command
@@ -50,6 +32,24 @@ Supported services:
     ```
     go run main.go
     ```
+
+## Current Services
+Supported services for extracting internet exposures:
+
+    * API Gateway
+    * CloudFront
+    * EC2
+    * Elastic Kubernetes Service
+    * Elastic Beanstalk
+    * Elastic Search
+    * Elastic Load Balancing 
+    * IoT
+    * Lightsail
+    * MediaStore
+    * Relational Database Service
+    * Redshift
+    * Route53
+    * S3
 
 ## AWS Patterns
 
@@ -120,6 +120,6 @@ Thank you for inspiration
 * [IAM Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html)
 * [Cartography](https://github.com/lyft/cartography)
 
-##License
+## License
 
 Smogcloud is licensed under GPLv3, some subcomponents have seperate licenses. 
