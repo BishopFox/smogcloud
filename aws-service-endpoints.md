@@ -1,0 +1,331 @@
+Work in progress to identify endpoints that return Hostnames, URIs, or IPs
+
+```
+# first install rigpgrep (https://github.com/BurntSushi/ripgrep)
+git clone https://github.com/aws/aws-cli
+cd aws-cli/awscli/examples
+ rg 'amazonaws.com|elasticbeanstalk.com|cloudfront.net' | grep -v '\-\-' | cut -d':' -f1 | sort -u | sed -e 's/^/ - [ ] /; s/\.rst//;'
+ ```
+ 
+ - [ ] apigateway/get-domain-name
+ - [ ] apigateway/get-domain-names
+ - [ ] ~~apigateway/update-domain-name~~
+ - [ ] ~~application-autoscaling/deregister-scalable-target~~
+ - [ ] ~~application-autoscaling/register-scalable-target~~
+ - [ ] cloudformation/estimate-template-cost
+ - [ ] ~~cloudfront/create-cloud-front-origin-access-identity~~
+ - [ ] ~~cloudfront/create-distribution-with-tags~~
+ - [ ] ~~cloudfront/create-distribution~~
+ - [ ] ~~cloudfront/create-field-level-encryption-config~~
+ - [ ] ~~cloudfront/create-field-level-encryption-profile~~
+ - [ ] ~~cloudfront/create-invalidation~~
+ - [ ] ~~cloudfront/create-public-key~~
+ - [ ] ~~cloudfront/get-distribution-config~~
+ - [ ] ~~cloudfront/get-distribution~~
+ - [x] cloudfront/list-distributions
+ - [ ] ~~cloudfront/sign~~
+ - [ ] ~~cloudfront/update-distribution~~
+ - [ ] cloudtrail/lookup-events
+ - [ ] ~~codebuild/create-webhook~~
+ - [ ] codecommit/batch-get-repositories
+ - [ ] ~~codecommit/create-repository~~
+ - [ ] codecommit/get-repository
+ - [ ] ~~cognito-identity/create-identity-pool~~
+ - [ ] cognito-identity/describe-identity-pool
+ - [ ] ~~cognito-identity/update-identity-pool~~
+ - [ ] cognito-idp/describe-user-pool-domain
+ - [ ] cognito-idp/get-ui-customization
+ - [ ] ~~dax/decrease-replication-factor~~
+ - [ ] ~~dax/delete-cluster~~
+ - [ ] dax/describe-clusters
+ - [ ] ~~dax/increase-replication-factor~~
+ - [ ] ~~devicefarm/create-upload~~
+ - [ ] ~~dlm/create-default-role~~
+ - [ ] ~~dms/create-endpoint~~
+ - [ ] dms/describe-endpoints
+ - [ ] ~~docdb/create-db-cluster~~
+ - [ ] ~~docdb/delete-db-cluster~~
+ - [ ] ~~docdb/delete-db-instance~~
+ - [ ] docdb/describe-db-clusters
+ - [ ] docdb/describe-db-instances
+ - [ ] docdb/failover-db-cluster
+ - [ ] ~~docdb/modify-db-cluster~~
+ - [ ] ~~docdb/modify-db-instance~~
+ - [ ] ~~docdb/reboot-db-instance~~
+ - [ ] ~~docdb/restore-db-cluster-from-snapshot~~
+ - [ ] ~~docdb/restore-db-cluster-to-point-in-time~~
+ - [ ] ~~docdb/start-db-cluster~~
+ - [ ] ~~docdb/stop-db-cluster~~
+ - [ ] dynamodb/describe-endpoints
+ - [ ] dynamodb/describe-table-replica-auto-scaling
+ - [ ] ~~dynamodb/update-table-replica-auto-scaling~~
+ - [ ] ~~ec2/create-client-vpn-endpoint~~
+ - [ ] ~~ec2/create-vpc-endpoint-service-configuration~~
+ - [ ] ~~ec2/create-vpc-endpoint~~
+ - [ ] ec2/describe-client-vpn-endpoints
+ - [ ] ec2/describe-conversion-tasks
+ - [ ] ec2/describe-network-interfaces
+ - [ ] ec2/describe-regions
+ - [x] ec2/describe-vpc-endpoint-service-configurations
+ - [ ] ec2/describe-vpc-endpoint-services
+ - [ ] ec2/describe-vpc-endpoints
+ - [ ] ec2/export-client-vpn-client-configuration
+ - [ ] ecr/get-authorization-token
+ - [ ] ecr/get-download-url-for-layer
+ - [ ] ecr/get-login
+ - [ ] ~~ecs/create-service~~
+ - [x] eks/describe-cluster
+ - [ ] ~~elasticache/decrease-replica-count~~
+ - [ ] elasticache/describe-replication-groups
+ - [ ] ~~elasticache/increase-replica-count~~
+ - [ ] ~~elasticache/modify-replication-group~~
+ - [ ] ~~elasticache/test-failover~~
+ - [ ] ~~elasticbeanstalk/check-dns-availability~~
+ - [ ] ~~elasticbeanstalk/create-environment~~
+ - [x] elasticbeanstalk/describe-environments
+ - [ ] ~~elasticbeanstalk/retrieve-environment-info~~
+ - [ ] ~~elasticbeanstalk/terminate-environment~~
+ - [ ] ~~elasticbeanstalk/update-environment~~
+ - [ ] ~~elb/create-load-balancer~~
+ - [x] elb/describe-load-balancers
+ - [ ] ~~elbv2/create-load-balancer~~
+ - [x] elbv2/describe-load-balancers
+ - [ ] ~~emr/create-default-roles~~
+ - [ ] emr/describe-cluster
+ - [ ] emr/list-instances
+ - [ ] ~~emr/ssh~~
+ - [ ] fms/get-notification-channel
+ - [ ] gamelift/describe-fleet-events
+ - [ ] ~~greengrass/create-software-update-job~~
+ - [ ] ~~iam/create-service-linked-role~~
+ - [ ] ~~iam/create-service-specific-credential~~
+ - [ ] ~~iam/delete-service-linked-role~~
+ - [ ] iam/get-account-authorization-details
+ - [ ] iam/list-instance-profiles
+ - [ ] iam/list-roles
+ - [ ] iam/list-service-specific-credential
+ - [ ] iam/list-service-specific-credentials
+ - [ ] iam/reset-service-specific-credential
+ - [ ] importexport/get-shipping-label
+ - [x] iot/describe-domain-configuration
+ - [ ] iot/describe-endpoint
+ - [ ] iotanalytics/get-dataset-content
+ - [ ] kms/list-grants
+ - [ ] ~~lambda/add-permission~~
+ - [ ] lambda/get-function
+ - [ ] lambda/get-layer-version-by-arn
+ - [ ] lambda/get-layer-version
+ - [ ] lambda/get-policy
+ - [ ] ~~lambda/publish-layer-version~~
+ - [ ] lightsail/get-blueprints
+ - [ ] ~~lightsail/get-load-balancer~~
+ - [x] lightsail/get-load-balancers
+ - [ ] lightsail/get-relational-database
+ - [ ] lightsail/get-relational-databases
+ - [ ] mediaconvert/describe-endpoints
+ - [ ] ~~mediapackage-vod/create-asset~~
+ - [ ] mediapackage-vod/describe-asset
+ - [ ] mediapackage-vod/list-packaging-configurations
+ - [ ] ~~mediapackage/create-channel~~
+ - [ ] ~~mediapackage/create-origin-endpoint~~
+ - [ ] mediapackage/describe-channel
+ - [ ] mediapackage/describe-origin-endpoint
+ - [ ] mediapackage/list-channels
+ - [ ] mediapackage/list-origin-endpoints
+ - [ ] ~~mediapackage/rotate-ingest-endpoint-credentials~~
+ - [ ] ~~mediapackage/update-channel~~
+ - [ ] ~~mediapackage/update-origin-endpoint~~
+ - [ ] ~~mediastore/describe-container~~
+ - [x] mediastore/list-containers
+ - [ ] mediatailor/get-playback-configuration
+ - [ ] mediatailor/list-playback-configurations
+ - [ ] ~~mediatailor/put-playback-configuration~~
+ - [ ] ~~opsworks/create-app~~
+ - [ ] opsworks/describe-apps
+ - [ ] opsworks/describe-commands
+ - [ ] opsworks/describe-elastic-load-balancers
+ - [ ] opsworks/describe-instances
+ - [ ] opsworks/describe-rds-db-instances
+ - [ ] ~~opsworks/register~~
+ - [ ] ~~opsworkscm/create-backup~~
+ - [ ] ~~opsworkscm/create-server~~
+ - [ ] opsworkscm/describe-backups
+ - [ ] opsworkscm/describe-events
+ - [ ] opsworkscm/describe-servers
+ - [ ] ~~opsworkscm/start-maintenance~~
+ - [ ] ~~opsworkscm/update-server-engine-attributes~~
+ - [ ] ~~opsworkscm/update-server~~
+ - [ ] ~~rds/create-db-cluster-endpoint~~
+ - [ ] ~~rds/create-db-cluster~~
+ - [ ] ~~rds/delete-db-cluster-endpoint~~
+ - [ ] rds/describe-db-cluster-endpoints
+ - [ ] rds/describe-db-clusters
+ - [x] rds/describe-db-instances
+ - [ ] ~~rds/describe-source-regions~~
+ - [ ] ~~rds/generate-auth-token~~
+ - [ ] ~~rds/modify-db-cluster-endpoint~~
+ - [ ] ~~rds/reboot-db-instance~~
+ - [x] redshift/describe-clusters
+ - [ ] ~~redshift/disable-snapshot-copy~~
+ - [ ] ~~redshift/enable-snapshot-copy~~
+ - [ ] ~~redshift/modify-cluster-iam-roles~~
+ - [ ] ~~redshift/modify-cluster-maintenance~~
+ - [ ] ~~redshift/modify-snapshot-copy-retention-period~~
+ - [ ] ~~redshift/reboot-cluster~~
+ - [ ] redshift/resize-cluster
+ - [ ] ~~redshift/rotate-encryption-key~~
+ - [ ] ~~s3/presign~~
+ - [ ] s3/website
+ - [ ] ~~s3api/complete-multipart-upload~~
+ - [ ] ~~s3api/create-bucket~~
+ - [ ] s3api/get-object-acl
+ - [ ] ~~s3api/put-bucket-notification-configuration~~
+ - [ ] ~~s3api/put-bucket-notification~~
+ - [ ] ~~s3api/put-bucket-replication~~
+ - [ ] ~~servicecatalog/create-product~~
+ - [ ] ~~servicecatalog/create-provisioning-artifact~~
+ - [ ] servicecatalog/describe-provisioning-artifact
+ - [ ] ~~servicecatalog/update-provisioning-artifact~~
+ - [ ] ~~sqs/create-queue~~
+ - [ ] sqs/get-queue-url
+ - [ ] sqs/list-dead-letter-source-queues
+ - [ ] sqs/list-queues
+ - [ ] ssm/describe-effective-instance-associations
+ - [ ] ssm/describe-maintenance-window-tasks
+ - [ ] ssm/get-command-invocation
+ - [ ] ssm/get-deployable-patch-snapshot-for-instance
+ - [ ] ssm/get-maintenance-window-task
+ - [ ] ssm/list-command-invocations
+ - [ ] ssm/list-commands
+ - [ ] ~~ssm/resume-session~~
+ - [ ] ~~ssm/update-maintenance-window-task~~
+ - [ ] wafv2/get-sampled-requests
+ - [ ] workdocs/describe-document-versions
+ - [ ] workdocs/get-document-version
+ - [ ] ~~workdocs/initiate-document-version-upload~~
+ - [ ] xray/batch-traces-get
+ - [ ] xray/get-trace-summaries
+
+
+Things that return public IPs addresses:
+
+rg '(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}' | grep -v '\-\-' | grep -Ev '\b(10|192.168|172.(1[6-9]|2[0-9]|3[0-2]))\.' | grep -v '0\.0\.0\.0' | cut -d ':' -f1 | sort -u
+
+- [ ] cloudtrail/lookup-events
+- [ ] ~~codepipeline/create-custom-action-type~~
+- [ ] codepipeline/list-action-types
+- [ ] devicefarm/get-upload
+- [ ] ~~directconnect/allocate-public-virtual-interface~~
+- [ ] directconnect/associate-virtual-interface
+- [ ] ~~directconnect/create-bgp-peer~~
+- [ ] ~~directconnect/create-public-virtual-interface~~
+- [ ] ~~directconnect/delete-bgp-peer~~
+- [ ] ~~directconnect/delete-direct-connect-gateway-association~~
+- [ ] directconnect/describe-virtual-interfaces
+- [ ] ~~directconnect/update-virtual-interface-attributes~~
+- [ ] discovery/describe-agents
+- [ ] ~~ec2/advertise-byoip-cidr~~
+- [ ] ~~ec2/allocate-address~~
+- [ ] ~~ec2/create-customer-gateway~~
+- [ ] ~~ec2/deprovision-byoip-cidr~~
+- [ ] ~~ec2/deregister-transit-gateway-multicast-group-members~~
+- [ ] ~~ec2/deregister-transit-gateway-multicast-group-source~~
+- [ ] ec2/describe-addresses
+- [ ] ec2/describe-byoip-cidrs
+- [ ] ec2/describe-client-vpn-endpoints
+- [ ] ec2/describe-customer-gateways
+- [ ] ec2/describe-moving-addresses
+- [x] ec2/describe-nat-gateways
+- [ ] ec2/describe-network-interfaces
+- [ ] ec2/describe-prefix-lists
+- [ ] ec2/describe-public-ipv4-pools
+- [ ] ec2/describe-security-groups
+- [ ] ec2/describe-vpcs
+- [ ] ec2/describe-vpn-connections
+- [ ] ~~ec2/modify-vpn-connection~~
+- [ ] ~~ec2/modify-vpn-tunnel-certificate~~
+- [ ] ~~ec2/modify-vpn-tunnel-options~~
+- [ ] ~~ec2/move-address-to-vpc~~
+- [ ] ~~ec2/provision-byoip-cidr~~
+- [ ] ~~ec2/register-transit-gateway-multicast-group-members~~
+- [ ] ~~ec2/register-transit-gateway-multicast-group-source~~
+- [ ] ~~ec2/replace-network-acl-entry~~
+- [ ] ~~ec2/restore-address-to-classic~~
+- [ ] ~~ec2/revoke-security-group-ingress~~
+- [ ] ~~ec2/run-instances~~
+- [ ] ec2/search-transit-gateway-multicast-groups
+- [ ] ~~ec2/update-security-group-rule-descriptions-egress~~
+- [ ] ~~ec2/update-security-group-rule-descriptions-ingress~~
+- [ ] ~~ec2/withdraw-byoip-cidr~~
+- [ ] ecr/describe-image-scan-findings
+- [ ] ~~elbv2/create-load-balancer~~
+- [ ] ~~elbv2/create-rule~~
+- [ ] emr/list-instances
+- [ ] ~~emr/ssh~~
+- [ ] ~~globalaccelerator/advertise-byoip-cidr~~
+- [ ] ~~globalaccelerator/create-accelerator~~
+- [ ] ~~globalaccelerator/deprovision-byoip-cidr~~
+- [ ] globalaccelerator/describe-accelerator
+- [ ] globalaccelerator/list-accelerators
+- [ ] globalaccelerator/list-byoip-cidr
+- [ ] ~~globalaccelerator/provision-byoip-cidr~~
+- [ ] ~~globalaccelerator/update-accelerator~~
+- [ ] ~~globalaccelerator/withdraw-byoip-cidr~~
+- [ ] greengrass/get-connectivity-info
+- [ ] lightsail/get-domain
+- [ ] lightsail/get-domains
+- [ ] lightsail/get-instance-access-details
+- [ ] lightsail/get-instance
+- [x] lightsail/get-instances
+- [ ] lightsail/get-relational-database-log-events
+- [ ] lightsail/get-static-ip
+- [ ] lightsail/get-static-ips
+- [ ] ~~mediaconnect/add-flow-outputs~~
+- [ ] ~~mediaconnect/create-flow~~
+- [ ] mediaconnect/describe-flow
+- [ ] ~~mediaconnect/update-flow-output~~
+- [ ] ~~mediaconnect/update-flow-source~~
+- [ ] ~~medialive/create-channel~~
+- [ ] ~~medialive/create-input~~
+- [ ] opsworks/describe-elastic-ips
+- [ ] opsworks/describe-instances
+- [ ] ~~opsworks/register-elastic-ip~~
+- [ ] ~~opsworks/register~~
+- [ ] ~~redshift/create-hsm-configuration~~
+- [ ] redshift/describe-hsm-configurations
+- [ ] ~~route53resolver/create-resolver-endpoint~~
+- [ ] ~~route53resolver/create-resolver-rule~~
+- [ ] ~~route53resolver/delete-resolver-rule~~
+- [ ] route53resolver/get-resolver-rule
+- [ ] route53resolver/list-resolver-endpoint-ip-addresses
+- [ ] route53resolver/list-resolver-rules
+- [ ] ~~route53resolver/update-resolver-rule~~
+- [ ] shield/describe-attack
+- [ ] shield/describe-protection
+- [ ] ssm/describe-instance-information
+- [ ] ~~waf-regional/update-ip-set~~
+- [ ] ~~waf/update-ip-set~~
+- [ ] wafv2/get-ip-set
+- [ ] wafv2/get-rate-based-statement-managed-keys
+- [ ] wafv2/get-sampled-requests
+- [ ] workspaces/describe-workspace-directories
+- [ ] workspaces/describe-workspaces
+- [ ] xray/batch-traces-get
+
+Other endpoints we have identified
+
+ - [x] apigateway/get-rest-apis
+ - [x] apigateway/get-stages
+ - [x] apigatewayv2/get-apis
+ - [x] ec2/describe-instances
+ - [x] elasticsearch/list-domain-names
+ - [x] elasticsearch/describe-elasticsearch-domain
+ - [x] route53/list-hosted-zones
+ - [x] route53/list-resource-record-sets
+ - [x] s3/list-buckets
+ - [ ] transfer
+ - [ ] cloudsearch
+ - [ ] mq
+ - [ ] cloud9
+ - [ ] kinesisvideo
+ - [ ] kafka
