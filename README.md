@@ -1,4 +1,4 @@
-#☁️ Smogcloud 
+# ☁️ Smogcloud 
 
 Find exposed AWS cloud assets that you did not know you had. A comprehensive asset inventory is step one to any capable security program. We made smogcloud to enable security engineers, penetration testers, and AWS administrators to monitor the collective changes that create dynamic and ephemeral internet-facing assets on a more frequent basis. May be useful to identify:
 
@@ -8,7 +8,7 @@ Find exposed AWS cloud assets that you did not know you had. A comprehensive ass
  - Services not currently monitored 
  - Shadow IT
 
-##🛠Getting Started
+## 🛠Getting Started
 1. Install and setup go
 2. Install smogcloud using the following command
 
@@ -33,7 +33,7 @@ Find exposed AWS cloud assets that you did not know you had. A comprehensive ass
     go run main.go
     ```
 
-## Current Services
+## 🕵️ Current Services
 Supported services for extracting internet exposures:
 
     * API Gateway
@@ -51,7 +51,7 @@ Supported services for extracting internet exposures:
     * Route53
     * S3
 
-##🔎 AWS Patterns
+## 🔎 AWS Patterns
 
 From studying Open API documentation on RESTful AWS endpoints we determined these are the patterns of exposure URIs that you may find in AWS accounts. It is important to understand how to interact with these native services to test them for vulnerabilities and other misconfigurations. Security engineers may want to monitor Cloudtrail logs or build DNS monitoring for requests to these services. 
 
@@ -100,18 +100,18 @@ From studying Open API documentation on RESTful AWS endpoints we determined thes
 - mediapackage
   - https://{random_id}.mediapackage.{region}.amazonaws.com/in/v1/{random_id}/channel
 
-##📌 References
+## 📌 References
 * [AWS SDK Go](https://docs.aws.amazon.com/sdk-for-go/api/)
 * [API-guru Open API for AWS](https://github.com/APIs-guru/openapi-directory/tree/master/APIs/amazonaws.com)
 * [aws-cli](https://github.com/aws/aws-cli)
 
-##👨‍💻  Authors
+## 👨‍💻  Authors
 
 * **Oscar Salazar** - *Initial work* - [Bishop Fox](https://github.com/tracertea)
 * **Rob Ragan** - *Initial work* - [Bishop Fox](https://github.com/basicScandal) [🐦@sweepthatleg](https://twitter.com/sweepthatleg)
 * **Brandon Gaudet** - *Initial work* - [Bishop Fox](https://github.com/brandondgaudet)
 
-##📣 Acknowledgments
+## 📣 Acknowledgments
 
 Thank you for inspiration
 * [Cloudmapper](https://github.com/duo-labs/cloudmapper)
@@ -120,6 +120,6 @@ Thank you for inspiration
 * [IAM Access Analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html)
 * [Cartography](https://github.com/lyft/cartography)
 
-## License
+## 📄 License
 
 Smogcloud is licensed under GPLv3, some subcomponents have seperate licenses. 
