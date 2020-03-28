@@ -8,7 +8,7 @@ Find exposed AWS cloud assets that you did not know you had. A comprehensive ass
  - Services not currently monitored 
  - Shadow IT
 
-## 🛠Getting Started
+## 🛠 Getting Started
 1. Install and setup go
 2. Install smogcloud using the following command
 
