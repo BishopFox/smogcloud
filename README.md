@@ -99,6 +99,10 @@ From studying Open API documentation on RESTful AWS endpoints we determined thes
   - https://{random_id}.mediaconvert.{region}.amazonaws.com
 - mediapackage
   - https://{random_id}.mediapackage.{region}.amazonaws.com/in/v1/{random_id}/channel
+- elasticbeanstalk
+  - https://{random_id}.{user_provided}.elasticbeanstalk.com
+- cognito
+  - https://{user_provided}.auth.{region}.amazoncognito.com
 
 ## 📌 References
 * [AWS SDK Go](https://docs.aws.amazon.com/sdk-for-go/api/)
@@ -108,8 +112,11 @@ From studying Open API documentation on RESTful AWS endpoints we determined thes
 ## 👨‍💻  Authors
 
 * **Oscar Salazar** - *Initial work* - [Bishop Fox](https://github.com/tracertea)
-* **Rob Ragan** - *Initial work* - [Bishop Fox](https://github.com/basicScandal) [🐦@sweepthatleg](https://twitter.com/sweepthatleg)
+* **Rob Ragan** - *Initial work* - [Bishop Fox](https://github.com/basicScandal) [🐦 @sweepthatleg](https://twitter.com/sweepthatleg)
 * **Brandon Gaudet** - *Initial work* - [Bishop Fox](https://github.com/brandondgaudet)
+
+## ✨  Contributions
+We do our best to maintain our tools, but can't always keep them as up to date as we'd like. So, we always appreciate code contributions, feature requests, and bug reports.
 
 ## 📣 Acknowledgments
 
